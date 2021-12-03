@@ -38,7 +38,7 @@
                             {!!$errors->first('name', '<span class="text-danger has-error">:message</span>')!!}
                         </div>
                         <div class="col-sm-6 form-group">
-                            <label>Slug (Do not use / in slug.)</label>
+                            <label>Slug</label>
                             <input class="form-control" name="slug" value="{{old('slug')}}" placeholder="Enter Slug">
                             {!!$errors->first('slug', '<span class="text-danger has-error">:message</span>')!!}
                         </div>
@@ -53,13 +53,13 @@
             @if(auth()->user()->role == 'super_admin')
                   <div class="row">
                             <div class="col-sm-4 form-group">
-                                <label>Identifier (Developer Option)</label>
+                                <label>Identifier</label>
                                 <input class="form-control" type="text" name="identifier" value="{{old('identifier')}}"  placeholder="Enter Identifier">
                                 {!!$errors->first('identifier', '<span class="text-danger has-error">:message</span>')!!}
                             </div>
 
                             <div class="col-sm-4 form-group">
-                                <label>Page Type (Developer Option)</label>
+                                <label>Page Type</label>
                                 <select class="form-control" name="type">
                                     <option value="">--select one--</option>
                                     <option value="single_page">Single Page</option>
@@ -67,7 +67,7 @@
                                 </select>
                             </div>
                             <div class="col-sm-4 form-group">
-                                <label>Location (Developer Option)</label>
+                                <label>Location</label>
                                 <select class="form-control" name="location">
                                     <option value="">--select one--</option>
                                     <option value="footer">Display in Footer</option>

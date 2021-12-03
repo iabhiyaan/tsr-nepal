@@ -12,7 +12,7 @@ class NavigationController extends Controller
 {
   public function list()
   {
-      $data['details'] = Navigation::orderBy('order', 'asc')->where('parent', '0')->get();
+      $data['details'] = Navigation::orderBy('order', 'asc')->get();
       return view('admin.navigation.list', $data);
   }
 

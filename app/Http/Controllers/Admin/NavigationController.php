@@ -118,7 +118,7 @@ class NavigationController extends Controller
       'parent' => 'numeric',
     ]);
     $rawData = $request->except(['identifier', 'slug', 'published']);
-    $rawData['identifier'] = $request->identifier . '_' . rand(10, 100);
+    $rawData['identifier'] = $request->identifier;
     $rawData['slug'] = $this->generateSlug($request->name, $request->slug, null);
     $rawData['published'] = is_null($request->published) ? 0 : 1;
     $rawData['order'] = $this->findOrderForNavigaiton($request->parent);
